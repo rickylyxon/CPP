@@ -1,41 +1,37 @@
 #include<stdio.h>
 
-void insertion_sort(int ar[],int n)
-{
+void insertion_sort(int ar[],int n){
     for (int i = 1; i < n; i++)
     {
-        int temp=ar[i];
+        int current=ar[i];
         int j=i-1;
-        while (j>=0&&ar[j]>temp)
+        while (ar[j]>current&&j>=0)
         {
             ar[j+1]=ar[j];
             j--;
         }
-        ar[j+1]=temp;
+        ar[j+1]=current;
     }
     
 }
-
-void main()
-{
-    printf("Enter how many element you want");
+int main(){
     int n;
+    printf("Enter how many element you wamt");
     scanf("%d",&n);
     int ar[n];
-    printf("Enter the element\n");
+    printf("Enter the value of elements");
     for (int i = 0; i < n; i++)
     {
-        printf("Enter the value of the element in [%d]",i);
+        printf("Enter the value of the elements [%d]",i);
         scanf("%d",&ar[i]);
     }
     
     insertion_sort(ar,n);
-
-    printf("Sorted array\n");
+    
+    printf("The sorted elements are");
     for (int i = 0; i < n; i++)
     {
         printf("%d \t",ar[i]);
     }
-    
-    
+    return 0;
 }

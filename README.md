@@ -1,2 +1,3 @@
-# web3_bootcamp_final_project
-Solidity & BNB Chain Development Bootcamp Final Project
+# It's how i start as a programmer
+
+
